@@ -1,8 +1,13 @@
-from django.shortcuts import render
+from rest_framework import generics
+from shuttleapi.models import Gym
+from shuttleapi.serializers import GymSerializer
 
-# Create your views here.
-from django.http import HttpResponse
+
+class GymList(generics.ListCreateAPIView):
+    queryset = Gym.objects.all()
+    serializer_class = GymSerializer
 
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the shuttleapi index.")
+class GymDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Gym.objects.all()
+    serializer_class = GymSerializer
