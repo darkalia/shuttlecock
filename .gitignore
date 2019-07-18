@@ -5,3 +5,6 @@
 # Do not get python cache files
 __pycache__
 *.pyc
+
+# Do not commit .vscode
+.vscode
