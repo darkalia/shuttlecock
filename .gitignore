@@ -1,3 +1,7 @@
 .tox
 .tags
 .venv
+
+# Do not get python cache files
+__pycache__
+*.pyc
